@@ -9,8 +9,7 @@ html {
 }
 
 body {
-  // counter-reset: section;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Font name", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
@@ -19,6 +18,17 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
