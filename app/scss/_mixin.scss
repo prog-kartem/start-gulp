@@ -1,9 +1,11 @@
 @mixin text-rows($rows) {
+  /* stylelint-disable */
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-line-clamp: $rows;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical; 
+  /* stylelint-enable */
 }
 
 @mixin rmax($width) {

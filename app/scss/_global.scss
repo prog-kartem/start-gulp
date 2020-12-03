@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Font name", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -38,6 +39,18 @@ p {
   max-width: 1170px;
 }
 
+.visually-hidden {
+  /* stylelint-disable */
+  position: absolute !important;
+  overflow: hidden;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  /* stylelint-enable */
+}
+
 // BEM Helper
 
 .d-flex {
@@ -46,4 +59,14 @@ p {
 
 .d-block {
   display: block;
+}
+
+.fz0 {
+  font-size: 0;
+}
+
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

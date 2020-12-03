@@ -1,1 +1,9 @@
-// Fonts
+@font-face {
+  src:
+    url("../fonts/") format("woff2"),
+    url("../fonts/") format("woff"),
+    url("../fonts/") format("truetype");
+  font-family: "Font Name";
+  font-weight: 400;
+  font-display: swap;
+}
