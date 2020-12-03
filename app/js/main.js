@@ -1,3 +1,1 @@
-$(function () {
-
-});
+const variable = document.querySelector('.class__name');
