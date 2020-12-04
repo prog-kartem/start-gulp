@@ -22,7 +22,7 @@ gulp.task("sass", function () {
         overrideBrowserslist: ["last 8 versions"],
       })
     )
-    .pipe(gulp.dest("./build/css"))
+    .pipe(gulp.dest("./docs/css"))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -35,7 +35,7 @@ gulp.task("script", function () {
     ])
     .pipe(concat("libs.min.js"))
     .pipe(uglify())
-    .pipe(gulp.dest("./build/js"));
+    .pipe(gulp.dest("./docs/js"));
 });
 
 gulp.task("style", function () {
@@ -46,7 +46,7 @@ gulp.task("style", function () {
     ])
     .pipe(concat("libs.min.css"))
     .pipe(cssmin())
-    .pipe(gulp.dest("./build/css"));
+    .pipe(gulp.dest("./docs/css"));
 });
 
 gulp.task("html", function () {
@@ -55,7 +55,7 @@ gulp.task("html", function () {
       prefix: "@@",
       basepath: '@file'
     }))
-    .pipe(gulp.dest('./build'))
+    .pipe(gulp.dest('./docs'))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -63,17 +63,17 @@ gulp.task("html", function () {
 
 gulp.task("font", function () {
   return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('./build/fonts'));
+    .pipe(gulp.dest('./docs/fonts'));
 });
 
 gulp.task("images", function () {
   return gulp.src('app/images/**/*')
-    .pipe(gulp.dest('./build/images'));
+    .pipe(gulp.dest('./docs/images'));
 });
 
 gulp.task("js", function () {
   return gulp.src("app/js/**/*.js")
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./docs/js'))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -82,7 +82,7 @@ gulp.task("js", function () {
 gulp.task("browser-sync", function () {
   browserSync.init({
     server: {
-      baseDir: "./build/",
+      baseDir: "./docs/",
     },
   });
 });
