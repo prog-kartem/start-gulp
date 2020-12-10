@@ -91,6 +91,8 @@ gulp.task("watch", function () {
   gulp.watch("app/scss/**/*.scss", gulp.parallel("sass"));
   gulp.watch("app/**/*.html", gulp.parallel("html"));
   gulp.watch("app/js/**/*.js", gulp.parallel("js"));
+  gulp.watch("app/images/**/*.*", gulp.parallel("images"));
+  gulp.watch("app/fonts/**/*.*", gulp.parallel("font"));
 });
 
 gulp.task(
