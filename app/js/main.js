@@ -1,1 +1,1 @@
-const variable = document.querySelector('.class__name');
+console.log('Hello World!')

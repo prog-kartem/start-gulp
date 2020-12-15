@@ -73,6 +73,8 @@ gulp.task("images", function () {
 
 gulp.task("js", function () {
   return gulp.src("app/js/**/*.js")
+    .pipe(concat("main.min.js"))
+    .pipe(uglify())
     .pipe(gulp.dest('./docs/js'))
     .pipe(browserSync.reload({
       stream: true
@@ -97,5 +99,5 @@ gulp.task("watch", function () {
 
 gulp.task(
   "default",
-  gulp.parallel("images", "html", "font", "style", "script", "sass", "watch", "browser-sync")
+  gulp.parallel("images", "html", "font", "style", "script", "js", "sass", "watch", "browser-sync")
 );
