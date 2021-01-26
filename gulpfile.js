@@ -73,8 +73,6 @@ gulp.task("images", function () {
 
 gulp.task("js", function () {
   return gulp.src("app/js/**/*.js")
-    .pipe(concat("main.min.js"))
-    .pipe(uglify())
     .pipe(gulp.dest('./docs/js'))
     .pipe(browserSync.reload({
       stream: true

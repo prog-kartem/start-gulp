@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  font-size: 10px;
 }
 
 *,
@@ -15,6 +14,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
+  background-color: $white;
 }
 
 a {
@@ -28,7 +28,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -54,11 +56,23 @@ p {
 
 // BEM Helper
 
-.d-flex {
+.flex {
   display: flex;
+
+  &--a-center {
+    align-items: center;
+  }
+
+  &--j-space {
+    justify-content: space-between;
+  }
+
+  &--j-center {
+    justify-content: center;
+  }
 }
 
-.d-block {
+.block {
   display: block;
 }
 
@@ -68,6 +82,4 @@ p {
 
 .list-reset {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
