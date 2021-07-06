@@ -42,18 +42,6 @@ ol {
   max-width: 1170px;
 }
 
-.visually-hidden {
-  /* stylelint-disable */
-  position: absolute !important;
-  overflow: hidden;
-  border: 0 !important;
-  padding: 0 !important;
-  width: 1px !important;
-  height: 1px !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  /* stylelint-enable */
-}
-
 // BEM Helper
 
 .flex {

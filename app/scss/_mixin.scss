@@ -19,3 +19,21 @@
     @content;
   }
 }
+
+@mixin font($font-family, $font-weight, $font-size) {
+  font-family: $font-family, sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size + "px";
+}
+
+@mixin font-face($font-name, $font-weigth, $font-path) {
+  @font-face {
+    src:
+      url("#{$font-path}.woff2") format("woff2"),
+      url("#{$font-path}.woff") format("woff"),
+      url("#{$font-path}.ttf") format("truetype");
+        font-family: $font-name;
+        font-weight: $font-weigth;
+        font-display: swap;
+  }
+}
